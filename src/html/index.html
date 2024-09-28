@@ -2,15 +2,16 @@
 <html lang="ru">
     @@include('blocks/head.html')
 <body>
-    <!-- Шапка сайта -->
     @@include('blocks/page-header.html')
-    <!-- Основное содержимое страницы -->
     <main class="main">
         <div class="main__container">
             @@include('blocks/poster.html')
+            @@include('blocks/work.html')
+            @@include('blocks/salary.html')
+            @@include('blocks/reviews.html')
         </div>
     </main>
-    <!-- Подвал сайта -->
     @@include('blocks/page-footer.html')
+    <script src="scripts/main.js"></script>
 </body>
 </html>

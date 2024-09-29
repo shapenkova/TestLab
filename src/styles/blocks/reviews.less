@@ -6,6 +6,7 @@
     overflow: hidden;
 
     &__container {
+        position: relative;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -13,10 +14,12 @@
         width: 100%;
         max-width: 1295px;
         margin: 0 auto;
-        padding: 57px 40px 45px;
+        padding: 57px 92px 45px;
     }
+    
     &__title {
         margin: 0 auto;
+        padding-right: 20px;
         color: @black;
         font-family: @font2;
         font-size: 40px;
@@ -24,4 +27,32 @@
         line-height: 1.4;
         text-align: center;
     }
+    &__swiper {
+        width: 100%;
+        margin-top: 32px;
+    }
+}
+.arrow {
+    padding: 0;
+    border: none;
+    background: none;
+    color: @primary;
+    font-size: 0;
+    text-decoration: none;
+    cursor: pointer;
+
+    &__icon {
+        width: 32px;
+        height: 32px;
+    }
+}
+.arrow--left {
+    transform: rotate(180deg);
+}
+.hoverable-path {
+    transition: fill 0.3s ease;
+}
+
+svg:hover .hoverable-path {
+    fill: @primary-hover;
 }

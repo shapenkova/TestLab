@@ -1,0 +1,103 @@
+.swiper-slide {
+    height: auto;
+    display: flex;
+}
+.swiper--3s {
+width: 100%;
+.swiper-slide {
+    box-sizing: border-box;
+    width: calc((1087px / 3) + 11px);
+    min-width: 341px;
+    padding-right: 32px;
+    // @media @bw1660 {
+    //     width: calc(33.3333% + 13.3333px);
+    //     min-width: 320px;
+    //     padding-right: 40px;
+    // }
+    // @media @bw1020 {
+    //     width: calc(33.3333% + 10px);
+    //     min-width: 310px;
+    //     padding-right: 30px;
+    // }
+    // @media @bw768 {
+    //     width: calc(33.3333% + 6.6666px);
+    //     min-width: 300px;
+    //     padding-right: 20px;
+    // }
+    &:last-child {
+        width: calc((1087px / 3) - 22px);
+        min-width: 280px;
+        padding-right: 0;
+        @media @bw1660 {
+        width: calc(33.3333% - 26.6666px);
+        }
+        @media @bw1340 {
+            width: calc(33.3333% - 20px);
+        }
+        @media @bw768 {
+            width: calc(33.3333% - 13.3333px);
+        }
+    }
+    & > * {
+        width: 100%;
+    }
+    .info-card {
+        &__link {
+            cursor: pointer;
+            cursor: grab;
+            &:active {
+                cursor: pointer;
+                cursor: grabbing;
+                }
+            }
+            &__title {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.swiper-footer {
+    position: absolute;
+    bottom: 18.6vh;
+    right: 51px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1216px;
+    @media @bw1340 {
+        display: none;
+    }
+}
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    position: relative;
+    right: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    margin-top: 53px;
+    padding: 0 15px;
+    gap: 11px;
+}
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: @mid-grey;
+    background-clip: padding-box;
+    opacity: 1;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color:@primary;
+    background-clip: padding-box;
+}
+.swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 2px 3px;
+    cursor: pointer;
+}

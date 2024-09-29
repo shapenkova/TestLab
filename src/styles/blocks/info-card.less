@@ -1,0 +1,80 @@
+.info-card {
+    display: flex;
+    width: 341px;
+    max-width: 100%;
+    min-width: 288px;
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 22px 22px 35px 22px;
+        box-shadow: 0 5px 24px 0 @shadow1;
+        border-radius: 8px;
+        background: @white;
+        color: @black;
+        font-family: @font1;
+        text-decoration: none;
+        transition: box-shadow 0.2s;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 0 15px 24px 0 @shadow1;
+        }
+    }
+    &__title {
+        margin: 0;
+        color: @black;
+        font-family: @font2;
+        font-size: 16px;
+        font-weight: @font_weight2;
+        line-height: 1.5;
+    }
+    &__desc1 {
+        margin: 0;
+        padding-top: 4px;
+        color: @dark-gray;
+        font-family: @font1;
+        font-size: 12px;
+        font-weight: @font_weight1;
+        line-height: 1.33;
+    }
+    &__desc2 {
+        margin: 0;
+        padding-top: 20px;
+        color: @black;
+        font-family: @font1;
+        font-size: 14px;
+        font-weight: @font_weight1;
+        line-height: 1.71;
+    }
+    &__pic {
+        display: block;
+        position: relative;
+        width: 100%;
+        max-width: 44px;
+        border-radius: 100%;
+        text-decoration: none;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-top: 100%;
+        }
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    &__box {
+        box-sizing: border-box;
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}

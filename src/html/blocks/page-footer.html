@@ -1,0 +1,58 @@
+<section class="page-footer">
+    <div class="page-footer__container">
+        <h2 class="page-footer__title">Отправь форму</h2>
+        <div class="page-footer__form">
+            <form 
+                action="https://jsonplaceholder.typicode.com/posts"
+                class="page-footer__submit-form submit-form form"
+                id="#js-submitFrom"
+            >
+                <div class="form__group form__group--w50">
+                    <label class="field form__field">
+                    <input  
+                        type="text" 
+                        placeholder="Имя" 
+                        name="name" 
+                        class="field__input" 
+                        required
+                        id="js-submitName"
+                    >
+                    </label>
+                    <label class="field form__field">
+                        <input  
+                        type="tel" 
+                        placeholder="Телефон" 
+                        name="page-header__nav-toggle" 
+                        class="field__input" 
+                        required
+                        id="js-submitTel"
+                        >
+                    </label>
+                </div>
+
+                <div class="form__check-list">
+                    <label class="form__check">
+                        <input 
+                            id="form__check" 
+                            type="checkbox" 
+                            name="agree" 
+                            class=" form__check-input" 
+                            required 
+                        />
+                        <span class="form__check-mark"></span>
+                        <span class="form__check-label form__check-labs">
+                            Согласен, отказываюсь
+                        </span>
+                    </label>
+                    
+                    <button class="field__button" type="submit">Отправить</button>
+                </div>
+                
+            </form>
+        </div>
+
+        <div class="page-footer__vault-copy">
+            <p class="footer__vault-copy-text">&copy; 2021 Лаборатория интернет</p>
+        </div>
+    </div>
+</section>

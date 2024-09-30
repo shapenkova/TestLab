@@ -8,6 +8,14 @@ document.addEventListener('scroll', function() {
         : headerLink.classList.remove('scrolled');
 });
 
+//Главное навигационное меню
+const root = document.documentElement;
+const navToggle = document.querySelector("#js-navToggle");
+navToggle.addEventListener("click", function () {
+  root.classList.toggle("show-nav");
+});
+
+
 //Swiper
 const swipers = document.querySelectorAll(".js-swiper");
 swipers.forEach(function (swpr) {

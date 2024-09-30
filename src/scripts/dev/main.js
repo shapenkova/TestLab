@@ -31,22 +31,18 @@ swipers.forEach(function (swpr) {
 });
 
 //Аккордеон
-const boxes = Array.from(document.querySelectorAll(".box")); // считываем все элементы аккордеона в массив
+const boxes = Array.from(document.querySelectorAll(".box")); 
 
 boxes.forEach((box) => {
-  box.addEventListener("click", boxHandler); // при нажатии на бокс вызываем ф-ию boxHanlder
+    box.addEventListener("click", boxHandler); 
 });
 
 function boxHandler(e) {
-  e.preventDefault(); // сбрасываем стандартное поведение
-  let currentBox = e.target.closest(".box"); // определяем текущий бокс
-  let currentContent = e.target.nextElementSibling; // находим скрытый контент
-  currentBox.classList.toggle("active"); // присваиваем ему активный класс
-  if (currentBox.classList.contains("active")) {
-    // если класс активный ..
-    currentContent.style.maxHeight = currentContent.scrollHeight + "px"; // открываем контент
-  } else {
-    // в противном случае
-    currentContent.style.maxHeight = 0; // скрываем контент
-  }
+    e.preventDefault(); 
+    let currentBox = e.target.closest(".box"); 
+    let currentContent = e.target.nextElementSibling; 
+    currentBox.classList.toggle("active");
+    currentContent.style.maxHeight = currentBox.classList.contains("active") 
+    ? currentContent.scrollHeight + "px" 
+    : "0";
 }

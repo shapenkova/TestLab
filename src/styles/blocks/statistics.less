@@ -12,11 +12,17 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        gap: 37px;
+        gap: 19px;
         width: 100%;
         max-width: 1295px;
         margin: 0 auto;
         padding: 68px 40px 67px;
+        @media @bw1020 {
+            padding: 20px 20px 32px;
+        }
+        @media @bw768 {
+            padding: 20px 20px 32px 16px;
+        }
     }
     &__item-title {
         margin: 0 0 17px;
@@ -25,6 +31,12 @@
         font-size: 18px;
         font-weight: @font_weight2;
         line-height: 1.78;
+        @media @bw1020 {
+            margin: 0 0 46px;
+        }
+        @media @bw768 {
+            margin: 0 0 15px;
+        }
     }
     &__item-text {
         margin: 0;
@@ -40,10 +52,19 @@
         display: flex;
         justify-content: space-between;
         gap: 32px;
+        @media @bw1020 {
+            flex-direction: column;
+        }
+        @media @bw768 {
+            gap: 20px;
+        }
     }
     &__item {
         box-sizing: border-box;
         width: 100%;
         max-width: 592px;
+        @media @bw1020 {
+            max-width: 100%;
+        }
     }
 }

@@ -1,5 +1,7 @@
 'use strict'
 
+const root = document.documentElement;
+
 //Шапка сайта при скролле
 document.addEventListener('scroll', function() {
     let headerLink = document.querySelector('.page-header');
@@ -9,10 +11,9 @@ document.addEventListener('scroll', function() {
 });
 
 //Главное навигационное меню
-const root = document.documentElement;
 const navToggle = document.querySelector("#js-navToggle");
 navToggle.addEventListener("click", function () {
-  root.classList.toggle("show-nav");
+    root.classList.toggle("show-nav");
 });
 
 
@@ -28,15 +29,30 @@ swipers.forEach(function (swpr) {
         grabCursor: true,
         pagination: {
             el: ".swiper-pagination",
-            clickable: true
+            clickable: true,
         },
         navigation: {
         nextEl: ".swiper-arrow-next",
         prevEl: ".swiper-arrow-prev",
         disabledClass: "arrow--disabled"
-        }
+        },
+        // on: {
+        //     slideChange: function () {
+        //         updateContainerHeight(this);
+        //     },
+        // },
     });
 });
+// const updateContainerHeight = function (swiper) {
+//     const activeSlide = swiper.slides[swiper.activeIndex];
+//     const height = activeSlide.offsetHeight;
+//     const paddingBottom = 37; // Паддинг, который нужно учесть
+//     swiper.el.style.height = `${height + paddingBottom}px`;
+// };
+
+// Здесь вы можете добавить вызов `updateContainerHeight` при инициализации
+// updateContainerHeight(swiperInstance);
+
 
 //Аккордеон
 const boxes = Array.from(document.querySelectorAll(".box")); 

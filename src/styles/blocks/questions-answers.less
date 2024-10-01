@@ -10,6 +10,12 @@
         max-width: 1295px;
         margin: 0 auto;
         padding: 80px 40px 60px 40px;
+        @media @bw1020 {
+            padding: 61px 22px 56px;
+        }
+        @media @bw768 {
+            padding: 55px 17px 56px;
+        }
     }
     &__title {
         margin: 0;
@@ -19,12 +25,25 @@
         font-weight: @font_weight2;
         line-height: 1.2;
         text-align: center;
+        @media @bw768 {
+            font-size: 24px;
+            line-height: 1.33;
+        }
     }
 }
 
 .accordion {
+    box-sizing: border-box;
     padding: 46px 83px 0 103px;
+    @media @bw1020 {
+        margin: 0;
+        padding: 46px 0 0 0;
+    }
+    @media @bw768 {
+        padding: 42px 0 0;
+    }
     .box {
+        box-sizing: border-box;
         border-bottom: 1px solid @light-gray;
         &:last-child {
             border-bottom: none;
@@ -44,15 +63,24 @@
 
         .label {
             position: relative;
+            display: flex;
+            box-sizing: border-box;
             padding: 24px 0; 
             background-color: transparent;
-            font-size: 18px; 
             color: @black; 
             font-family: @font2;
             font-size: 18px;
             font-weight: @font_weight2;
             line-height: 1.78;
             cursor: pointer; 
+            @media @bw1020 {
+                width: 100%;
+                max-width: 660px;
+            }
+            @media @bw768 {
+                max-width: 295px;
+                padding: 16px 0;
+            }
             &:hover {
                 color:@primary;
             }
@@ -70,10 +98,23 @@
                 height: 20px;
                 border: 3px solid @black; 
                 background-color: transparent; 
-                border-radius: 50%;
+                border-radius: 100%;
                 font-family: @font1;
                 font-size: 22px;
                 transition: color 0.3s, border-color 0.3s;
+                @media @bw1340 {
+                    right: -50px;
+                }
+                @media @bw1020 {
+                    right: -65px;
+                }
+                @media @bw768 {
+                    top: 34%;
+                    right: -48px;
+                }
+                // @media @bw1020 { 
+                //     top: 36%;
+                // }
             }
         }
 
@@ -92,8 +133,34 @@
                 font-size: 18px;
                 font-weight: @font_weight1;
                 line-height: 1.78;
+                @media @bw1020 {
+                    width: 100%;
+                    max-width: 675px;
+                }
+                @media @bw768 {
+                    max-width: 299px;
+                    padding-bottom: 16px;
+                    font-size: 16px;
+                    line-height: 1.75;
+                }
             }
         }
     }
-    
+}
+#label1,
+#lavel2,
+#label3 {
+    @media @bw1020 {
+        padding: 24px 0 0;
+    }
+    @media @bw768 {
+        padding: 16px 0;
+    }
+}
+#label1 {
+    &::after {
+        @media @bw768 {
+            top: 27%;
+        }
+    }
 }

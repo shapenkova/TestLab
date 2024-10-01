@@ -5,7 +5,8 @@
     min-width: 288px;
 
     &__link {
-        display: flex;
+        box-sizing: border-box;
+        display: inline-flex;
         flex-direction: column;
         width: 100%;
         padding: 22px 22px 35px 22px;
@@ -19,6 +20,10 @@
         cursor: pointer;
         &:hover {
             box-shadow: 0 15px 24px 0 @shadow1;
+        }
+        @media @bw768 {
+            height: 281px;
+            padding: 22px 18px 27px 18px;
         }
     }
     &__title {

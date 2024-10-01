@@ -11,7 +11,15 @@
         max-width: 1295px;
         margin: 0 auto;
         padding: 80px 40px;
-        gap: 32px;
+        gap: 25px;
+        @media @bw1020 {
+            padding: 55px 22px;
+        }
+        @media @bw768 {
+            flex-direction: column;
+            padding: 55px 18px;
+            gap: 8px;
+        }
     }
     &__title {
         margin: 0;
@@ -20,6 +28,13 @@
         font-size: 32px;
         font-weight: @font_weight2;
         line-height: 1.25;
+        @media @bw1020 {
+            font-size: 20px;
+            line-height: 1.2;
+        }
+        @media @bw768 {
+            text-align: center;
+        }
     }
     &__text {
         margin: 0;
@@ -31,12 +46,30 @@
         font-size: 16px;
         font-weight: @font_weight1;
         line-height: 1.75;
+        @media @bw1020 {
+            max-width: 352px;
+        }
+        @media @bw768 {
+            max-width: 100%;
+            padding-top: 3px;
+            text-align: center;
+        }
+
     }
     &__box2 {
         position: relative;
         box-sizing: border-box;
         width: 100%;
         max-width: 592px;
+        @media @bw1020 {
+            max-width: 351px;
+        }
+    }
+    &__box1 {
+        @media @bw768 {
+            order: 2;
+        }
+        
     }
     &__pic {
         position: relative;

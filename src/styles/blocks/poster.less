@@ -68,13 +68,13 @@
         flex-direction: column;
         align-items: center; 
         width: 100%;
-        max-width: 1285px;
-        padding-left: 40px;
-        padding-right: 40px;
+        max-width: 768px;
         transform: translate(-50%, -50%);
         @media @bw1020 {
-            padding-left: 22px;
-            padding-right: 22px;
+            max-width: 476px;
+        }
+        @media @bw768 {
+            max-width: 288px;
         }
     }
     &__title {
@@ -107,6 +107,9 @@
             font-size: 16px;
             line-height: 1.75;
         }
+        @media @bw768 {
+            padding-top: 10px;
+        }
     }
     &__link {
         position: relative;
@@ -137,6 +140,9 @@
 
         @media @bw1020 {
             margin-top: 37px;
+        }
+        @media @bw768 {
+            margin-top: 26px;
         }
     }
 }

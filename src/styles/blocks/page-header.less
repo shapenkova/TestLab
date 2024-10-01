@@ -26,7 +26,6 @@
     &__logo-link {
         position: relative;
         box-sizing: border-box;
-        display: inline-block;
         display: flex;
         align-items: center;
         padding-left: 40px;
@@ -38,6 +37,9 @@
         text-decoration: none;
         transition: color 0.2s;
         cursor: pointer;
+        @media @bw768 {
+            padding-left: 44px;
+        }
         &::after,
         &::before {
             content: "";

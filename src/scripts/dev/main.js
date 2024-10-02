@@ -23,7 +23,7 @@ navToggle.addEventListener("click", function () {
 //Swiper
 const swipers = document.querySelectorAll(".js-swiper");
 swipers.forEach(function (swpr) {
-    new Swiper(swpr, {
+    const swiperInstance = new Swiper(swpr, {
         updateOnWindowResize: true,
         slidesPerView: "auto",
         freeMode: true,
@@ -35,31 +35,29 @@ swipers.forEach(function (swpr) {
             clickable: true,
         },
         navigation: {
-        nextEl: ".swiper-arrow-next",
-        prevEl: ".swiper-arrow-prev",
-        disabledClass: "arrow--disabled"
+            nextEl: ".swiper-arrow-next",
+            prevEl: ".swiper-arrow-prev",
+            disabledClass: "arrow--disabled"
         },
-        // on: {
-        //     slideChange: function() {
-        //         adjustContainerHeight();
-        //     }
-        // }
     });
+
+    function adjustContainerHeight() {
+        const activeSlide = swiperInstance.slides[swiperInstance.activeIndex];
+        const slideHeight = activeSlide.clientHeight;
+        swiperInstance.el.style.height = slideHeight + 'px';     
+        swiperInstance.el.style.paddingBottom = '60px'; 
+    }
+    adjustContainerHeight();
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth <= 350) {
+            adjustContainerHeight(); 
+        }
+    });
+
+    swiperInstance.on('slideChange', adjustContainerHeight);
 });
 
-// function adjustContainerHeight() {
-//     const activeSlide = document.querySelector('.swiper-slide-active');
-//     const container = document.querySelector('.swiper-wrapper');
-    
-//     // Устанавливаем высоту контейнера по высоте активного слайда
-//     container.style.height = `${activeSlide.clientHeight}px`;
-// }
-
-// Инициализация высоты при загрузке страницы
-// window.onload = adjustContainerHeight;
-
-// // Инициализация высоты при изменении размера окна
-// window.onresize = adjustContainerHeight;
 
 //Аккордеон
 const boxes = Array.from(document.querySelectorAll(".box")); 

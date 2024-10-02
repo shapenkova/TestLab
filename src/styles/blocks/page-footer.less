@@ -62,7 +62,7 @@
         justify-content: center;
         width: 100%;
         max-width: 1285px;
-        margin: 48px 0 80px;
+        margin: 44px 0 80px;
         @media @bw1020 {
             margin: 32px 0 56px;
         }
@@ -177,10 +177,7 @@
             display: block;
             margin-left: 15px;
             color: @dangerous;
-            // @media @bw768 {
-            //     top: 100px;
-            // }
-    }
+        }
     }
     &__check-input {
         .is-hidden ();
@@ -223,6 +220,7 @@
     }
 }
 .field {
+    position: relative;
     display: block;
     margin: 0 0 5px;
     color: @dark-gray;
@@ -235,6 +233,7 @@
     span.error {
         display: block;
         margin: 5px 0 0;
+        color: @dangerous;
     }
 
     &__input {
@@ -280,4 +279,17 @@
     font-size: 14px;
     font-weight: @font_weight1;
     line-height: 1.71;
+}
+.check-icon {
+    display: none;
+    position: absolute;
+    top: 55%; 
+    transform: translateY(-55%); 
+    right: 10px; 
+}
+.valid .check-icon-success {
+    display: inline-block;
+}
+.invalid .check-icon-error {
+    display: inline-block; 
 }

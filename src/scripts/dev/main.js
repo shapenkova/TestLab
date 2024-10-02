@@ -20,7 +20,6 @@ navToggle.addEventListener("click", function () {
     header.classList.toggle("header-white");
 });
 
-
 //Swiper
 const swipers = document.querySelectorAll(".js-swiper");
 swipers.forEach(function (swpr) {
@@ -41,22 +40,26 @@ swipers.forEach(function (swpr) {
         disabledClass: "arrow--disabled"
         },
         // on: {
-        //     slideChange: function () {
-        //         updateContainerHeight(this);
-        //     },
-        // },
+        //     slideChange: function() {
+        //         adjustContainerHeight();
+        //     }
+        // }
     });
 });
-// const updateContainerHeight = function (swiper) {
-//     const activeSlide = swiper.slides[swiper.activeIndex];
-//     const height = activeSlide.offsetHeight;
-//     const paddingBottom = 37; // Паддинг, который нужно учесть
-//     swiper.el.style.height = `${height + paddingBottom}px`;
-// };
 
-// Здесь вы можете добавить вызов `updateContainerHeight` при инициализации
-// updateContainerHeight(swiperInstance);
+// function adjustContainerHeight() {
+//     const activeSlide = document.querySelector('.swiper-slide-active');
+//     const container = document.querySelector('.swiper-wrapper');
+    
+//     // Устанавливаем высоту контейнера по высоте активного слайда
+//     container.style.height = `${activeSlide.clientHeight}px`;
+// }
 
+// Инициализация высоты при загрузке страницы
+// window.onload = adjustContainerHeight;
+
+// // Инициализация высоты при изменении размера окна
+// window.onresize = adjustContainerHeight;
 
 //Аккордеон
 const boxes = Array.from(document.querySelectorAll(".box")); 
@@ -70,15 +73,13 @@ function boxHandler(e) {
     let currentBox = e.target.closest(".box"); 
     let currentContent = e.target.nextElementSibling; 
     currentBox.classList.toggle("active");
+
     currentContent.style.maxHeight = currentBox.classList.contains("active") 
     ? currentContent.scrollHeight + "px" 
     : "0";
 }
-
-
-const eventForm = $('#js-submitForm');
-if (eventForm.length) {
-    eventForm.validate({
-        errorElement: "span"
-    });
+//Маска для телефона
+const mobileMask = $('.js-mobileMask');
+if (mobileMask.length) {
+    mobileMask.mask('+7 (000) 000 00 00');
 }

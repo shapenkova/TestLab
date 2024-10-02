@@ -20,6 +20,9 @@
             padding: 58px 18px 0;
             gap: 27px;
         }
+        @media @bw350 {
+            padding: 58px 16px 0;
+        }
     }
 
     &__wrapper {
@@ -27,7 +30,10 @@
         align-items: center;
         justify-content: space-between;
         gap: 32px;
-        flex-direction: column;
+        @media @bw1020 {
+            flex-direction: column;
+        }
+        
     }
     &__block1,
     &__block2 {

@@ -3,6 +3,9 @@
     width: 341px;
     max-width: 100%;
     min-width: 288px;
+    @media @bw350 {
+        width: 288px;
+    }
 
     &__link {
         box-sizing: border-box;
@@ -24,6 +27,10 @@
         @media @bw768 {
             height: 281px;
             padding: 22px 18px 27px 18px;
+        }
+        @media @bw350 {
+            height: auto;
+            padding: 22px 22px 10px 22px;
         }
     }
     &__title {

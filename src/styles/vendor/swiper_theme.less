@@ -10,8 +10,12 @@ width: 100%;
 .swiper-slide {
     box-sizing: border-box;
     width: calc((1087px / 3) + 11px);
-    min-width: 341px;
+    min-width: 288px;
     padding-right: 32px;
+    @media @bw350 {
+        width: 288px;
+    }
+
     // @media @bw1660 {
     //     width: calc(33.3333% + 13.3333px);
     //     min-width: 320px;

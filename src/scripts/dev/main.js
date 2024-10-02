@@ -12,8 +12,11 @@ document.addEventListener('scroll', function() {
 
 //Главное навигационное меню
 const navToggle = document.querySelector("#js-navToggle");
+const header = document.querySelector(".page-header");
+
 navToggle.addEventListener("click", function () {
     root.classList.toggle("show-nav");
+    header.classList.toggle("header-white");
 });
 
 

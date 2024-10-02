@@ -16,6 +16,7 @@ const header = document.querySelector(".page-header");
 
 navToggle.addEventListener("click", function () {
     root.classList.toggle("show-nav");
+    navToggle.classList.toggle("active");
     header.classList.toggle("header-white");
 });
 
@@ -72,4 +73,12 @@ function boxHandler(e) {
     currentContent.style.maxHeight = currentBox.classList.contains("active") 
     ? currentContent.scrollHeight + "px" 
     : "0";
+}
+
+
+const eventForm = $('#js-submitForm');
+if (eventForm.length) {
+    eventForm.validate({
+        errorElement: "span"
+    });
 }

@@ -58,10 +58,18 @@
     visibility: hidden;
 }
 .header-white {
-    background-color: white ;
-    transition: background-color 0.3s;
+    background-color: @white ;
+    transition: background-color 0.2s;
 }
 
 .header-white .page-header__logo-link {
-    color: black;
+    color: @black;
+    padding-left: 40px;
+}
+
+.active {
+    &::before,
+    &::after {
+        background-color: @black;
+    }
 }

@@ -20,7 +20,7 @@ navToggle.addEventListener("click", function () {
     header.classList.toggle("header-white");
 });
 
-//Swiper
+//Слайдер
 const swipers = document.querySelectorAll(".js-swiper");
 swipers.forEach(function (swpr) {
     const swiperInstance = new Swiper(swpr, {
@@ -30,6 +30,7 @@ swipers.forEach(function (swpr) {
         spaceBetween: 0,
         speed: 500,
         grabCursor: true,
+        keyboard: true,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -50,7 +51,7 @@ swipers.forEach(function (swpr) {
     adjustContainerHeight();
 
     window.addEventListener('resize', function() {
-        if (window.innerWidth <= 350) {
+        if (window.innerWidth < 350) {
             adjustContainerHeight(); 
         }
     });
